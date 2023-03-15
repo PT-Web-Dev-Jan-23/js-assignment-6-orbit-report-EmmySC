@@ -16,5 +16,17 @@
 </table>
 
 <!-- TODO 2b: use *ngFor to display satellite data in the table -->
+<ng-container *ngFor="let displayList of fetchedSatellites">
+    <p>{{ displayList.satellite }}</p>
+    <p>{{ fetchedSatellites }}</p>
+</ng-container>
+<!-- async loadSatelliteData() {
+    let response = await fetch();
+    let data = await response.json();
+    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+        this.____.push()
+    } console.log(this.___);
+} -->
 <!-- TODO 3b: add style directive to conditionally highlight satellite type -->
 
