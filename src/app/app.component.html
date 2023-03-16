@@ -1,10 +1,12 @@
+<!--main webpage-->
 <h1>Orbit Report</h1>
-<!-- TODO 1: add list component to app HTML -->
+<!-- TODO 1: add Orbit List component to app HTML -->
 <orbit-list [satellites]="displayList"></orbit-list>
 <div class="search-form">
-	<!-- Search:--> <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm" /> <!--name="searchTerm"-->
+	<!-- Search:--> 
+	<input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
 	<button (click)="search(searchTerm.value);">Search</button>
 </div>
-
+<!--add Satellite Count component to app HTML-->
 <orbit-counts [satellites]="displayList"></orbit-counts>
 

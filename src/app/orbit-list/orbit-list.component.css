@@ -16,7 +16,7 @@ table {
  background: #dad8d8;
 }
 
-tr:nth-child(even) {     
+tr:nth-child(even) {      /* <tr> & parent-child rules & even/odd table --> HTML Table Styling */
 	background: white;
 }
 

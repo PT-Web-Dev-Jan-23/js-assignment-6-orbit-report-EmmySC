@@ -6,35 +6,15 @@
         <th>Orbit Type</th>
         <th>Launch Date</th>
     </tr>
-    <ng-container *ngFor="let satellite of satellites">  <!--[class] -->
+    <!-- TODO 2b: use *ngFor to display satellite data in the table -->
+    <ng-container *ngFor="let satellite of satellites">  
     <tr class="data-row">
         <td>{{ satellite.name }}</td>
-        <td [class.warning]="satellite.isSpaceDebris()">{{ satellite.type }}</td>
+        <!-- TODO 3b: add style directive to conditionally highlight satellite type -->
+        <td [class.warning]="satellite.isSpaceDebris()">{{ satellite.type }}</td> <!--[class] call the method-->
         <td>{{ satellite.operational }}</td>
         <td>{{ satellite.orbitType }}</td>
         <td>{{ satellite.launchDate }}</td>
     </tr>
     </ng-container>
 </table>
-
-<!-- TODO 2b: use *ngFor to display satellite data in the table -->
-<!-- <ng-container *ngFor="let satellite of satellites">
-</ng-container> -->
-<!-- async loadSatelliteData() {
-    let response = await fetch();
-    let data = await response.json();
-    console.log(data);
-    for (let i = 0; i < data.length; i++) {
-        this.____.push()
-    } console.log(this.___);
-} -->
-<!-- TODO 3b: add style directive to conditionally highlight satellite type -->
-
-<!-- <tr *ngFor ="let satellite of satellites" [class.warning]="satellite.shouldShowWarning()" [class.stripe]="satellite.zebraStripe(satellites)">
-    <td>{{satellite.name}}</td>
-    <td [class.warning]="satellite.shouldShowWarning()">{{satellite.type}}</td>
-    <td>{{satellite.operational}}</td>
-    <td>{{satellite.orbitType}}</td>
-    <td>{{satellite.launchDate}}</td>
- </tr> -->
-
