@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Satellite } from '../satellite';
 
 @Component({
-  selector: 'app-orbit-list',
+  selector: 'orbit-list',
   templateUrl: './orbit-list.component.html',
   styleUrls: ['./orbit-list.component.css']
 })
@@ -10,13 +10,14 @@ import { Satellite } from '../satellite';
 export class OrbitListComponent implements OnInit {
 
   @Input() satellites: Satellite[];
+
   constructor() { }
 
   ngOnInit() {
   }
 
 	sort(column: string): void {
-		// array.sort modifies the array, sorting the items based on the given compare function
+		// array.sort modifies the satellites array, sorting the items based on the given compare function
 		this.satellites.sort(function (a: Satellite, b: Satellite): number {
 			if (a[column] < b[column]) {
 				return -1;
@@ -26,5 +27,4 @@ export class OrbitListComponent implements OnInit {
 			return 0;
 		});
 	}
-
 }
